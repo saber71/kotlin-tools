@@ -15,6 +15,10 @@ object DateUtils {
 
     fun from(timestamp: Long): LocalDateTime {
         val instant = Instant.ofEpochMilli(timestamp)
+        return from(instant)
+    }
+
+    fun from(instant: Instant): LocalDateTime {
         return LocalDateTime.ofInstant(instant, zoneId)
     }
 
